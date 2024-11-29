@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Game Hub</h1>
+        <form id="registrationForm">
+            <input type="text" id="username" placeholder="Enter your username" required>
+            <button type="submit">Start</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            sessionStorage.setItem('username', username); // Сохраняем имя пользователя
+            window.location.href = "menu.html"; // Переход в меню
+        });
+    </script>
+</body>
+</html>

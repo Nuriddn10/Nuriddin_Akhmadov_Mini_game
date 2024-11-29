@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="welcomeMessage"></h1>
+        <h2>Choose a Game:</h2>
+        <div class="menu">
+            <button onclick="startGame('mini_game_1.html')">Arcade Game</button>
+            <button onclick="startGame('mini_game_2.html')">Racing Game</button>
+            <button onclick="startGame('mini_game_3.html')">Puzzle Game</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('welcomeMessage').innerText = 
+            `Welcome, ${sessionStorage.getItem('username')}!`;
+
+        function startGame(game) {
+            window.location.href = game;
+        }
+    </script>
+</body>
+</html>
